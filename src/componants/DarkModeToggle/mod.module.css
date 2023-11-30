@@ -1,0 +1,19 @@
+.container {
+  border: 2px solid var(--color-primary);
+  display: flex;
+  border-radius: 30px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2px;
+  position: relative;
+}
+.icon {
+  font-size: 22px;
+}
+.switcher {
+  width: 25px;
+  aspect-ratio: 1/1;
+  background-color: var(--color-primary);
+  position: absolute;
+  border-radius: 50%;
+}
