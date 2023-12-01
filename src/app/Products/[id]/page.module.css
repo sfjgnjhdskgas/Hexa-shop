@@ -1,0 +1,24 @@
+.container {
+}
+.header {
+}
+.info {
+}
+.title {
+}
+.desc {
+}
+.imgcontainer {
+  width: 70%;
+  position: relative;
+  height: 400px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.img {
+  object-fit: fill;
+}
+.content {
+}
+.text {
+}
