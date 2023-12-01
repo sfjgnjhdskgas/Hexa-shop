@@ -11,7 +11,6 @@ export default function NavBar() {
       </Link>
       <div className={styles.links}>
         <DarkModeToggle />
-        <button></button>
         {links.map((link) => {
           return (
             <Link key={link.id} href={`${link.link}`} className={styles.link}>
