@@ -17,3 +17,7 @@
 .img:hover {
   opacity: 1;
 }
+.imgs :last-child {
+  background-color: white;
+  border-radius: 50%;
+}

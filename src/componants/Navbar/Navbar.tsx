@@ -1,8 +1,7 @@
 import Link from "next/link";
-import { links } from "./data";
 import styles from "./Navbar.module.css";
-import Button from "../Button/Buttom";
 import DarkModeToggle from "../DarkModeToggle/darkmodetoggle";
+import DisplayButton from "../DisplayButton/DisplayButton";
 export default function NavBar() {
   return (
     <div className={styles.container}>
@@ -11,14 +10,7 @@ export default function NavBar() {
       </Link>
       <div className={styles.links}>
         <DarkModeToggle />
-        {links.map((link) => {
-          return (
-            <Link key={link.id} href={`${link.link}`} className={styles.link}>
-              {link.title}
-            </Link>
-          );
-        })}
-        <Button />
+        <DisplayButton />
       </div>
     </div>
   );

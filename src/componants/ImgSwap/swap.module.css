@@ -1,0 +1,40 @@
+.imgcontainer {
+  margin: 15px 0;
+  width: 100%;
+  position: relative;
+  height: 400px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.img {
+  object-fit: cover;
+}
+.category {
+  position: absolute;
+  background-color: #54c28bc2;
+  padding: 10px;
+  right: 0;
+  bottom: 0;
+}
+.imgs {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.imgss,
+.current {
+  cursor: pointer;
+  display: block;
+  object-fit: cover;
+  transition: all 0.2s ease;
+}
+.imgss:hover,
+.current:hover {
+  border: 2px solid var(--color-primary);
+  padding: 5px;
+}
+.current {
+  border: 3px solid var(--color-primary);
+}

@@ -1,0 +1,123 @@
+.cart {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  width: 50px;
+  height: 50px;
+  border: 2px solid #ffdf00;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+  align-items: center;
+  background-color: var(--color-primary);
+  transition: 0.3s border ease-in-out;
+  font-size: 20px;
+  cursor: pointer;
+}
+.cart:hover {
+  border-width: 25px;
+}
+.cart:active {
+  opacity: 0.8;
+}
+.container {
+  transition: all 0.5s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  z-index: 2;
+  background-color: white;
+  right: -120%;
+  min-width: 320px;
+  max-width: 100%;
+  height: 100%;
+  padding: 20px;
+  overflow: hidden;
+}
+.box {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  overflow-y: scroll;
+  height: 90%;
+}
+.box::-webkit-scrollbar {
+  display: none;
+}
+.slide {
+  right: 0 !important;
+}
+.slider {
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-self: flex-start;
+  width: fit-content;
+  margin-bottom: 20px;
+}
+.products {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.product {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.text {
+  max-width: 500px;
+}
+.title {
+  margin-bottom: 10px;
+}
+.description {
+  line-height: 1.6;
+  font-size: 12px;
+}
+@media (max-width: 767px) {
+  .products {
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  .product {
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+.edit {
+  display: flex;
+  gap: 20px;
+  font-size: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.price {
+  color: #ffdf00;
+  text-align: center;
+  flex-basis: 100%;
+}
+.trash {
+  cursor: pointer;
+}
+.checkout {
+  background-color: var(--color-primary);
+  padding: 20px;
+  font-size: 20px;
+  min-width: 280px;
+  border-radius: var(--border-rad);
+  border: none;
+  height: calc(10% - 20px);
+  outline: none;
+  margin-top: 20px;
+  cursor: pointer;
+  margin: auto;
+  margin-top: 20px;
+}

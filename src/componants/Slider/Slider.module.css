@@ -1,0 +1,126 @@
+.span4 {
+  position: relative;
+  overflow: hidden;
+}
+.section {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  margin: auto;
+  width: 100%;
+  padding: 0 20px;
+}
+.section::-webkit-scrollbar {
+  display: none;
+}
+
+.left::selection,
+.right::selection {
+  display: none;
+}
+.left,
+.right {
+  position: absolute;
+  height: 100%;
+  top: 50%;
+  display: flex;
+  transform: translateY(-50%);
+  font-size: 50px;
+  color: inherit;
+  cursor: pointer;
+  color: white;
+  padding: 70px 6px;
+  background-color: var(--color-primary);
+  align-items: center;
+  transition: all 0.3 ease-in-out;
+}
+
+.left {
+  left: 0;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.right {
+  right: 0;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.box {
+  height: 300px;
+  min-width: 30%;
+  border-radius: 15px;
+  border: 2px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+  text-align: center;
+  justify-content: space-between;
+  padding-bottom: 5px;
+}
+.img {
+  object-fit: cover;
+  width: 100% !important;
+  height: 150px !important;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+}
+
+.box:hover {
+  border: 2px solid var(--color-primary);
+}
+.hide {
+  width: calc(100% - 82px);
+  overflow: hidden;
+  margin: auto;
+}
+.price {
+  font-weight: bold;
+}
+.text {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  justify-self: flex-end;
+  gap: 5px;
+  margin-left: 5px;
+  text-align: left;
+}
+.price span {
+  text-decoration: line-through;
+  color: rgb(153, 41, 41);
+}
+.stock {
+  color: var(--color-primary);
+  font-size: 20px;
+}
+.rating {
+  font-size: 18px;
+}
+@media (max-width: 767px) {
+  .box {
+    min-width: 250px;
+  }
+  .section {
+    gap: 750px;
+  }
+}
+@media (max-width: 423px) {
+  .box {
+    min-width: 200px;
+  }
+  .section {
+    gap: 800px;
+  }
+}
+@media (max-width: 375px) {
+  .box {
+    min-width: 150px;
+  }
+  .section {
+    gap: 850px;
+  }
+}

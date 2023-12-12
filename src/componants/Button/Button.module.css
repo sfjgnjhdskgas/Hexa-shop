@@ -8,4 +8,6 @@
   border: none;
   border-radius: var(--border-rad);
   cursor: pointer;
+  align-self: flex-end;
+  margin: 20px;
 }

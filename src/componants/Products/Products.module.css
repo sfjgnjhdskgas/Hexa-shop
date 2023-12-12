@@ -1,0 +1,95 @@
+.box {
+  height: 350px;
+  flex-basis: 30%;
+  margin-bottom: 40px;
+  border-radius: 15px;
+  border: 2px solid var(--color-border);
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+  position: relative;
+}
+.box:hover {
+  border: 2px solid var(--color-primary);
+}
+.img {
+  object-fit: cover;
+  width: 100% !important;
+  height: 200px !important;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  margin: 0 10px;
+}
+.title {
+  font-weight: 700;
+  align-self: center;
+  margin: 10px 0;
+}
+.desc {
+  font-size: 12px;
+  color: #999;
+  line-height: 1.6;
+}
+.price {
+  position: absolute;
+  background-color: #54c28bc2;
+  color: yellow;
+  padding: 10px;
+  right: 0;
+  top: 0;
+  width: fit-content;
+}
+.pricedis {
+  position: absolute;
+  background-color: rgba(255, 0, 0, 0.389);
+  color: yellow;
+  padding: 10px;
+  left: 0;
+  top: 0;
+  width: fit-content;
+}
+@media (max-width: 767px) {
+  .box {
+    flex-basis: 100%;
+    display: flex;
+    height: 250px;
+  }
+  .box:nth-child(odd) {
+    flex-direction: row-reverse;
+  }
+  .box:nth-child(even) .price {
+    left: 0;
+  }
+  .box:nth-child(odd) .pricedis {
+    left: auto;
+    top: auto;
+    right: 0;
+    bottom: 0;
+  }
+  .box:nth-child(even) .pricedis {
+    left: 0;
+    top: auto;
+    bottom: 0;
+  }
+  .box:nth-child(even) .img {
+    border-radius: 0;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+  }
+  .img {
+    height: 100% !important;
+    width: 50% !important;
+    border-radius: 0;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+}
+.shit {
+  width: 100%;
+  text-align: center;
+  font-size: 30px;
+}

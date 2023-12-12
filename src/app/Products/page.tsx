@@ -1,14 +1,18 @@
 import Link from "next/link";
 import styles from "./page.module.css";
 import Image from "next/image";
-
+import { Metadata } from "next";
+import SearchBar from "@/componants/SearchBar/SearchBar";
+export const metadata: Metadata = {
+  title: "Hexashop - Products",
+  description: `Discover a world of endless shopping possibilities at our online
+          store. browse, choose amd order your favorite products from the
+          comfort of your home`,
+};
 async function getData() {
   const res = await fetch("https://dummyjson.com/products");
-  // The return value is *not* serialized
-  // You can return Date, Map, Set, etc.
 
   if (!res.ok) {
-    // This will activate the closest `error.js` Error Boundary
     throw new Error("Failed to fetch data");
   }
 
@@ -16,15 +20,25 @@ async function getData() {
 }
 export default async function Products() {
   const data = await getData();
+  // async function datas(input: string) {
+  //   "use server";
+  //   return input;
+  // }
+  // const title = datas;
+  // console.log(title);
   return (
     <div className={styles.container}>
-      {data.products.map((prod: any) => {
+      <SearchBar data={data.products} />
+      {/* {data.products.map((prod: any) => {
         return (
           <Link
             href={`/Products/${prod.id}`}
             className={styles.box}
             key={prod.id}
+            id={prod.category}
           >
+            <span className={styles.price}>${prod.price}.99</span>
+            <span className={styles.pricedis}>%{prod.discountPercentage}-</span>
             <Image
               src={prod.thumbnail}
               width={350}
@@ -38,7 +52,10 @@ export default async function Products() {
             </div>
           </Link>
         );
-      })}
+      })} */}
     </div>
   );
+}
+function wait(arg0: number) {
+  throw new Error("Function not implemented.");
 }

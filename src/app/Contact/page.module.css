@@ -1,0 +1,102 @@
+.contact {
+  padding: 20px 0;
+}
+.content {
+  margin-bottom: 40px;
+}
+.title {
+  font-size: 40px;
+  background: linear-gradient(
+    to bottom,
+    var(--color-primary),
+    var(--color-secondary)
+  );
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.desc {
+  font-size: 14px;
+  line-height: 1.6;
+}
+.pForm {
+  display: flex;
+  justify-content: space-between;
+}
+.form {
+  flex-basis: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.mainInput {
+  width: 100%;
+  padding: 20px 10px;
+  margin-bottom: 30px;
+  outline: none;
+  border: 2px solid var(--color-primary);
+  border-radius: var(--border-rad);
+  background-color: transparent;
+}
+.textarea {
+  background-color: transparent;
+  border: 2px solid var(--color-primary);
+  border-radius: var(--border-rad);
+  height: 250px;
+  outline: none;
+  width: 100%;
+  padding: 10px;
+}
+
+.submit {
+  align-self: flex-end;
+  padding: 20px 30px;
+  color: inherit;
+  background-color: transparent;
+  border: 2px solid var(--color-primary);
+  margin-top: 20px;
+}
+.infos {
+  flex-basis: 25%;
+}
+
+.touch {
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  font-weight: 500;
+  font-size: 18px;
+}
+@media (max-width: 767px) {
+  .infos {
+    order: -1;
+    text-align: center;
+    font-size: 12px;
+  }
+  .touch {
+    font-size: 16px;
+  }
+}
+.phone {
+  display: block;
+  color: #777;
+  margin-bottom: 10px;
+}
+.touch:nth-of-type(2) {
+  margin-top: 90px;
+}
+@media (max-width: 767px) {
+  .touch:nth-of-type(2) {
+    margin-top: 30px;
+  }
+}
+.address {
+  color: #777;
+  line-height: 2;
+}
+@media (max-width: 767px) {
+  .address {
+    margin-bottom: 40px;
+  }
+}
