@@ -2,7 +2,7 @@
 
 const nextConfig = {
   images: {
-    remotePatterns: ["i.dummyjson.com"],
+    domains: ["i.dummyjson.com"],
   },
 };
 
