@@ -18,7 +18,7 @@ export default function Products({
       titles = titles.toLowerCase();
       return !title || title === titles.slice(0, title.length) ? (
         <Link
-          href={`/Products/${prod.id}`}
+          href={`../../app/Products/${prod.id}`}
           className={styles.box}
           key={prod.id}
           id={prod.category}
